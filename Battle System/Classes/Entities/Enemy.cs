@@ -17,7 +17,8 @@ namespace Battle_System.Classes.Entities
     {
         public Skeleton() : base("Skeleton")
         {
-
+            hp = 5;
+            strength = 6;
         }
     }
 }

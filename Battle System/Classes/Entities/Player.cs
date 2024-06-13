@@ -31,8 +31,37 @@ namespace Battle_System.Classes.Entities
         public Fighter(string name) : base(name) 
         {
             strength = 5;
+            mp = 5;
+            hp = 20;
             ClassName = "Fighter";
             EquipItem(new Weapon("sword", "a basic sword", 1));
+        }
+    }
+    public class Ranger : Player
+    {
+        public Ranger(string name) : base(name)
+        {
+            strength = 4;
+            mp = 10;
+            hp = 10;
+            ClassName = "Ranger";
+            EquipItem(new Weapon("Bow", "a basic Bow", 1));
+        }
+        public override int Attack()
+        {
+            Console.WriteLine("I'm gonna nuke ya");
+            return (1000000);
+        }
+    }
+    public class Wizard : Player
+    {
+        public Wizard(string name) : base(name)
+        {
+            strength = 7;
+            mp = 20;
+            hp = 5;
+            ClassName = "Wizard";
+            EquipItem(new Weapon("Staff", "a basic Staff", 1));
         }
     }
 }
